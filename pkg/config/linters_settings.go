@@ -194,6 +194,7 @@ var defaultLintersSettings = LintersSettings{
 		ErrorVariableNames:               []string{"err"},
 		ForceExclusiveShortDeclarations:  false,
 	},
+	SnowyGo: SnowyGoSettings{},
 }
 
 type LintersSettings struct {
@@ -260,6 +261,7 @@ type LintersSettings struct {
 	Revive          ReviveSettings
 	RowsErrCheck    RowsErrCheckSettings
 	SlogLint        SlogLintSettings
+	SnowyGo         SnowyGoSettings
 	Spancheck       SpancheckSettings
 	Staticcheck     StaticCheckSettings
 	Stylecheck      StaticCheckSettings
@@ -829,6 +831,9 @@ type SlogLintSettings struct {
 
 	// Deprecated: use Context instead.
 	ContextOnly bool `mapstructure:"context-only"`
+}
+
+type SnowyGoSettings struct {
 }
 
 type SpancheckSettings struct {

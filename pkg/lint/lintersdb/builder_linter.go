@@ -88,6 +88,7 @@ import (
 	"github.com/golangci/golangci-lint/pkg/golinters/revive"
 	"github.com/golangci/golangci-lint/pkg/golinters/rowserrcheck"
 	"github.com/golangci/golangci-lint/pkg/golinters/sloglint"
+	"github.com/golangci/golangci-lint/pkg/golinters/snowygo"
 	"github.com/golangci/golangci-lint/pkg/golinters/spancheck"
 	"github.com/golangci/golangci-lint/pkg/golinters/sqlclosecheck"
 	"github.com/golangci/golangci-lint/pkg/golinters/staticcheck"
@@ -837,5 +838,9 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithPresets(linter.PresetStyle).
 			WithAutoFix().
 			WithURL("https://github.com/golangci/golangci-lint/blob/master/pkg/golinters/nolintlint/README.md"),
+
+		linter.NewConfig(snowygo.New(&cfg.LintersSettings.SnowyGo)).
+			WithEnabledByDefault().
+			WithSince("v1.0.0"),
 	}, nil
 }
