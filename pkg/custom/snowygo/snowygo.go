@@ -43,8 +43,15 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 					if sel, ok := node.Fun.(*ast.SelectorExpr); ok {
 						// check if fmt.Print* is used
 						if x, ok := sel.X.(*ast.Ident); ok {
-							if x.Name == "fmt" && (sel.Sel.Name == "Println" || sel.Sel.Name == "Printf" || sel.Sel.Name == "Print") {
-								pass.Reportf(node.Pos(), "fmt.Printf should not be used")
+							if x.Name == "fmt" {
+								switch sel.Sel.Name {
+								case "Print":
+									pass.Reportf(node.Pos(), "fmt.Print should not be used")
+								case "Printf":
+									pass.Reportf(node.Pos(), "fmt.Printf should not be used")
+								case "Println":
+									pass.Reportf(node.Pos(), "fmt.Println should not be used")
+								}
 							}
 						}
 					}
