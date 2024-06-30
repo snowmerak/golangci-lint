@@ -146,11 +146,13 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/tdakkota/asciicheck"),
 
 		linter.NewConfig(bidichk.New(&cfg.LintersSettings.BiDiChk)).
+			WithEnabledByDefault().
 			WithSince("1.43.0").
 			WithPresets(linter.PresetBugs).
 			WithURL("https://github.com/breml/bidichk"),
 
 		linter.NewConfig(bodyclose.New()).
+			WithEnabledByDefault().
 			WithSince("v1.18.0").
 			WithLoadForGoAnalysis().
 			WithPresets(linter.PresetPerformance, linter.PresetBugs).
@@ -169,6 +171,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/sivchari/containedctx"),
 
 		linter.NewConfig(contextcheck.New()).
+			WithEnabledByDefault().
 			WithSince("v1.43.0").
 			WithPresets(linter.PresetBugs).
 			WithLoadForGoAnalysis().
@@ -238,6 +241,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/breml/errchkjson"),
 
 		linter.NewConfig(errname.New()).
+			WithEnabledByDefault().
 			WithSince("v1.42.0").
 			WithPresets(linter.PresetStyle).
 			WithLoadForGoAnalysis().
@@ -282,6 +286,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/kyoh86/exportloopref"),
 
 		linter.NewConfig(forbidigo.New(&cfg.LintersSettings.Forbidigo)).
+			WithEnabledByDefault().
 			WithSince("v1.34.0").
 			WithPresets(linter.PresetStyle).
 			// Strictly speaking,
@@ -292,6 +297,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/ashanbrown/forbidigo"),
 
 		linter.NewConfig(forcetypeassert.New()).
+			WithEnabledByDefault().
 			WithSince("v1.38.0").
 			WithPresets(linter.PresetStyle).
 			WithURL("https://github.com/gostaticanalysis/forcetypeassert"),
@@ -320,6 +326,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/nunnatsa/ginkgolinter"),
 
 		linter.NewConfig(gocheckcompilerdirectives.New()).
+			WithEnabledByDefault().
 			WithSince("v1.51.0").
 			WithPresets(linter.PresetBugs).
 			WithURL("https://github.com/leighmcculloch/gocheckcompilerdirectives"),
@@ -346,6 +353,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/uudashr/gocognit"),
 
 		linter.NewConfig(goconst.New(&cfg.LintersSettings.Goconst)).
+			WithEnabledByDefault().
 			WithSince("v1.0.0").
 			WithPresets(linter.PresetStyle).
 			WithURL("https://github.com/jgautheron/goconst"),
@@ -374,6 +382,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/matoous/godox"),
 
 		linter.NewConfig(err113.New()).
+			WithEnabledByDefault().
 			WithSince("v1.26.0").
 			WithPresets(linter.PresetStyle, linter.PresetError).
 			WithLoadForGoAnalysis().
@@ -381,12 +390,14 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/Djarvur/go-err113"),
 
 		linter.NewConfig(gofmt.New(&cfg.LintersSettings.Gofmt)).
+			WithEnabledByDefault().
 			WithSince("v1.0.0").
 			WithPresets(linter.PresetFormatting).
 			WithAutoFix().
 			WithURL("https://pkg.go.dev/cmd/gofmt"),
 
 		linter.NewConfig(gofumpt.New(&cfg.LintersSettings.Gofumpt)).
+			WithEnabledByDefault().
 			WithSince("v1.28.0").
 			WithPresets(linter.PresetFormatting).
 			WithAutoFix().
@@ -412,6 +423,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			DeprecatedError("The repository of the linter has been archived by the owner.", "v1.41.0", "revive"),
 
 		linter.NewConfig(mnd.New(&cfg.LintersSettings.Mnd)).
+			WithEnabledByDefault().
 			WithSince("v1.22.0").
 			WithPresets(linter.PresetStyle).
 			WithURL("https://github.com/tommy-muehle/go-mnd"),
@@ -548,6 +560,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			DeprecatedError("The repository of the linter has been archived by the owner.", "v1.38.0", "govet 'fieldalignment'"),
 
 		linter.NewConfig(mirror.New()).
+			WithEnabledByDefault().
 			WithSince("v1.53.0").
 			WithPresets(linter.PresetStyle).
 			WithLoadForGoAnalysis().
@@ -583,6 +596,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/gostaticanalysis/nilerr"),
 
 		linter.NewConfig(nilnil.New(&cfg.LintersSettings.NilNil)).
+			WithEnabledByDefault().
 			WithSince("v1.43.0").
 			WithPresets(linter.PresetStyle).
 			WithLoadForGoAnalysis().
@@ -623,6 +637,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/kunwardeep/paralleltest"),
 
 		linter.NewConfig(perfsprint.New(&cfg.LintersSettings.PerfSprint)).
+			WithEnabledByDefault().
 			WithSince("v1.55.0").
 			WithLoadForGoAnalysis().
 			WithPresets(linter.PresetPerformance).
@@ -644,6 +659,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/yeya24/promlinter"),
 
 		linter.NewConfig(protogetter.New(&cfg.LintersSettings.ProtoGetter)).
+			WithEnabledByDefault().
 			WithSince("v1.55.0").
 			WithPresets(linter.PresetBugs).
 			WithLoadForGoAnalysis().
@@ -764,12 +780,14 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithSince("v1.3.0"),
 
 		linter.NewConfig(unconvert.New(&cfg.LintersSettings.Unconvert)).
+			WithEnabledByDefault().
 			WithSince("v1.0.0").
 			WithLoadForGoAnalysis().
 			WithPresets(linter.PresetStyle).
 			WithURL("https://github.com/mdempsky/unconvert"),
 
 		linter.NewConfig(unparam.New(&cfg.LintersSettings.Unparam)).
+			WithEnabledByDefault().
 			WithSince("v1.9.0").
 			WithPresets(linter.PresetUnused).
 			WithLoadForGoAnalysis().
@@ -827,6 +845,7 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/bombsimon/wsl"),
 
 		linter.NewConfig(zerologlint.New()).
+			WithEnabledByDefault().
 			WithSince("v1.53.0").
 			WithPresets(linter.PresetBugs).
 			WithLoadForGoAnalysis().
