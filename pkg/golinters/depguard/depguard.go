@@ -4,9 +4,9 @@ import (
 	"github.com/OpenPeeDeeP/depguard/v2"
 	"golang.org/x/tools/go/analysis"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/goanalysis"
-	"github.com/golangci/golangci-lint/pkg/lint/linter"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis"
+	"github.com/snowmerak/golangci-lint/pkg/lint/linter"
 )
 
 func New(settings *config.DepGuardSettings) *goanalysis.Linter {

@@ -9,8 +9,8 @@ import (
 
 	"golang.org/x/tools/go/analysis"
 
-	"github.com/golangci/golangci-lint/pkg/lint/linter"
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/lint/linter"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 const (

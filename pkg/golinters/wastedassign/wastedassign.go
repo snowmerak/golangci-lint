@@ -4,7 +4,7 @@ import (
 	"github.com/sanposhiho/wastedassign/v2"
 	"golang.org/x/tools/go/analysis"
 
-	"github.com/golangci/golangci-lint/pkg/goanalysis"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis"
 )
 
 func New() *goanalysis.Linter {

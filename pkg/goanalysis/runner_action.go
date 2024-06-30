@@ -13,9 +13,9 @@ import (
 	"golang.org/x/tools/go/packages"
 	"golang.org/x/tools/go/types/objectpath"
 
-	"github.com/golangci/golangci-lint/internal/errorutil"
-	"github.com/golangci/golangci-lint/internal/pkgcache"
-	"github.com/golangci/golangci-lint/pkg/goanalysis/pkgerrors"
+	"github.com/snowmerak/golangci-lint/internal/errorutil"
+	"github.com/snowmerak/golangci-lint/internal/pkgcache"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis/pkgerrors"
 )
 
 type actionAllocator struct {

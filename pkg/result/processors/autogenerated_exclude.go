@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/golangci/golangci-lint/pkg/logutils"
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/logutils"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 const (

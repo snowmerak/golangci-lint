@@ -13,12 +13,12 @@ import (
 
 	"golang.org/x/tools/go/packages"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/exitcodes"
-	"github.com/golangci/golangci-lint/pkg/goanalysis/load"
-	"github.com/golangci/golangci-lint/pkg/goutil"
-	"github.com/golangci/golangci-lint/pkg/lint/linter"
-	"github.com/golangci/golangci-lint/pkg/logutils"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/exitcodes"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis/load"
+	"github.com/snowmerak/golangci-lint/pkg/goutil"
+	"github.com/snowmerak/golangci-lint/pkg/lint/linter"
+	"github.com/snowmerak/golangci-lint/pkg/logutils"
 )
 
 // PackageLoader loads packages based on [golang.org/x/tools/go/packages.Load].

@@ -3,9 +3,9 @@ package staticcheck
 import (
 	"honnef.co/go/tools/staticcheck"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/goanalysis"
-	"github.com/golangci/golangci-lint/pkg/golinters/internal"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis"
+	"github.com/snowmerak/golangci-lint/pkg/golinters/internal"
 )
 
 func New(settings *config.StaticCheckSettings) *goanalysis.Linter {

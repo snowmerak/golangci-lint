@@ -13,7 +13,7 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/golangci/golangci-lint/internal/robustio"
+	"github.com/snowmerak/golangci-lint/internal/robustio"
 )
 
 const patternSuffix = ".tmp"

@@ -10,7 +10,7 @@ import (
 
 	hcversion "github.com/hashicorp/go-version"
 
-	"github.com/golangci/golangci-lint/scripts/website/github"
+	"github.com/snowmerak/golangci-lint/scripts/website/github"
 )
 
 func main() {

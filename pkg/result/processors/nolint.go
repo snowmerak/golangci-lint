@@ -10,11 +10,11 @@ import (
 
 	"golang.org/x/exp/maps"
 
-	"github.com/golangci/golangci-lint/pkg/golinters/nolintlint"
-	"github.com/golangci/golangci-lint/pkg/lint/linter"
-	"github.com/golangci/golangci-lint/pkg/lint/lintersdb"
-	"github.com/golangci/golangci-lint/pkg/logutils"
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/golinters/nolintlint"
+	"github.com/snowmerak/golangci-lint/pkg/lint/linter"
+	"github.com/snowmerak/golangci-lint/pkg/lint/lintersdb"
+	"github.com/snowmerak/golangci-lint/pkg/logutils"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 var _ Processor = (*Nolint)(nil)

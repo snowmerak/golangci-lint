@@ -3,8 +3,8 @@ package processors
 import (
 	"testing"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/logutils"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/logutils"
 )
 
 func TestMaxFromLinter(t *testing.T) {

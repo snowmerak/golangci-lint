@@ -8,10 +8,10 @@ import (
 	"golang.org/x/tools/go/packages"
 	"mvdan.cc/unparam/check"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/goanalysis"
-	"github.com/golangci/golangci-lint/pkg/lint/linter"
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis"
+	"github.com/snowmerak/golangci-lint/pkg/lint/linter"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 const linterName = "unparam"

@@ -3,10 +3,10 @@ package processors
 import (
 	"regexp"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/fsutils"
-	"github.com/golangci/golangci-lint/pkg/logutils"
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/fsutils"
+	"github.com/snowmerak/golangci-lint/pkg/logutils"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 const severityFromLinter = "@linter"

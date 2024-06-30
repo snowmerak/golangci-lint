@@ -5,7 +5,7 @@ import (
 
 	"golang.org/x/tools/go/packages"
 
-	"github.com/golangci/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/config"
 )
 
 const (

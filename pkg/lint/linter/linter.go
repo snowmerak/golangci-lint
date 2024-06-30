@@ -3,8 +3,8 @@ package linter
 import (
 	"context"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 type Linter interface {

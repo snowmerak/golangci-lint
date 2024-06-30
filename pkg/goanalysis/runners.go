@@ -12,12 +12,12 @@ import (
 	"golang.org/x/tools/go/analysis"
 	"golang.org/x/tools/go/packages"
 
-	"github.com/golangci/golangci-lint/internal/pkgcache"
-	"github.com/golangci/golangci-lint/pkg/goanalysis/pkgerrors"
-	"github.com/golangci/golangci-lint/pkg/lint/linter"
-	"github.com/golangci/golangci-lint/pkg/logutils"
-	"github.com/golangci/golangci-lint/pkg/result"
-	"github.com/golangci/golangci-lint/pkg/timeutils"
+	"github.com/snowmerak/golangci-lint/internal/pkgcache"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis/pkgerrors"
+	"github.com/snowmerak/golangci-lint/pkg/lint/linter"
+	"github.com/snowmerak/golangci-lint/pkg/logutils"
+	"github.com/snowmerak/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/timeutils"
 )
 
 type runAnalyzersConfig interface {

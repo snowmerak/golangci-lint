@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/golinters/nolintlint"
-	"github.com/golangci/golangci-lint/pkg/lint/lintersdb"
-	"github.com/golangci/golangci-lint/pkg/logutils"
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/golinters/nolintlint"
+	"github.com/snowmerak/golangci-lint/pkg/lint/lintersdb"
+	"github.com/snowmerak/golangci-lint/pkg/logutils"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 func newNolintFileIssue(line int, fromLinter string) result.Issue {

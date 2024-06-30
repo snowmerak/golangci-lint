@@ -1,8 +1,8 @@
 package processors
 
 import (
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 var _ Processor = (*MaxPerFileFromLinter)(nil)

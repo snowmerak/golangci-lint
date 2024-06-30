@@ -3,7 +3,7 @@ package processors
 import (
 	"regexp"
 
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 var _ Processor = (*IdentifierMarker)(nil)

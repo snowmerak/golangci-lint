@@ -1,7 +1,7 @@
 package snowygo
 
 import (
-	"github.com/golangci/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/config"
 	"go/ast"
 	"go/token"
 	"golang.org/x/tools/go/analysis"

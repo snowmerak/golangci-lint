@@ -8,10 +8,10 @@ import (
 	"golang.org/x/tools/go/analysis"
 	"golang.org/x/tools/imports"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/goanalysis"
-	"github.com/golangci/golangci-lint/pkg/golinters/internal"
-	"github.com/golangci/golangci-lint/pkg/lint/linter"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis"
+	"github.com/snowmerak/golangci-lint/pkg/golinters/internal"
+	"github.com/snowmerak/golangci-lint/pkg/lint/linter"
 )
 
 const linterName = "goimports"

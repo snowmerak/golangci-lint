@@ -1,4 +1,4 @@
-module github.com/golangci/golangci-lint
+module github.com/snowmerak/golangci-lint
 
 go 1.21.0
 

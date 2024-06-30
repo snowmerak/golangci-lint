@@ -8,11 +8,11 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	"github.com/golangci/golangci-lint/pkg/commands/internal"
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/exitcodes"
-	"github.com/golangci/golangci-lint/pkg/lint/lintersdb"
-	"github.com/golangci/golangci-lint/pkg/result/processors"
+	"github.com/snowmerak/golangci-lint/pkg/commands/internal"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/exitcodes"
+	"github.com/snowmerak/golangci-lint/pkg/lint/lintersdb"
+	"github.com/snowmerak/golangci-lint/pkg/result/processors"
 )
 
 const defaultMaxIssuesPerLinter = 50

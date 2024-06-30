@@ -7,16 +7,16 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"github.com/golangci/golangci-lint/internal/errorutil"
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/fsutils"
-	"github.com/golangci/golangci-lint/pkg/goutil"
-	"github.com/golangci/golangci-lint/pkg/lint/linter"
-	"github.com/golangci/golangci-lint/pkg/lint/lintersdb"
-	"github.com/golangci/golangci-lint/pkg/logutils"
-	"github.com/golangci/golangci-lint/pkg/result"
-	"github.com/golangci/golangci-lint/pkg/result/processors"
-	"github.com/golangci/golangci-lint/pkg/timeutils"
+	"github.com/snowmerak/golangci-lint/internal/errorutil"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/fsutils"
+	"github.com/snowmerak/golangci-lint/pkg/goutil"
+	"github.com/snowmerak/golangci-lint/pkg/lint/linter"
+	"github.com/snowmerak/golangci-lint/pkg/lint/lintersdb"
+	"github.com/snowmerak/golangci-lint/pkg/logutils"
+	"github.com/snowmerak/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/result/processors"
+	"github.com/snowmerak/golangci-lint/pkg/timeutils"
 )
 
 type processorStat struct {

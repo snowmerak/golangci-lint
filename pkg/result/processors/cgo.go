@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/golangci/golangci-lint/pkg/goutil"
-	"github.com/golangci/golangci-lint/pkg/result"
+	"github.com/snowmerak/golangci-lint/pkg/goutil"
+	"github.com/snowmerak/golangci-lint/pkg/result"
 )
 
 var _ Processor = (*Cgo)(nil)

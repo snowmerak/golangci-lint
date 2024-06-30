@@ -1,9 +1,9 @@
 package snowygo
 
 import (
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/custom/snowygo"
-	"github.com/golangci/golangci-lint/pkg/goanalysis"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/custom/snowygo"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis"
 	"golang.org/x/tools/go/analysis"
 )
 

@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/require"
 	_ "github.com/valyala/quicktemplate"
 
-	"github.com/golangci/golangci-lint/pkg/exitcodes"
-	"github.com/golangci/golangci-lint/test/testshared"
+	"github.com/snowmerak/golangci-lint/pkg/exitcodes"
+	"github.com/snowmerak/golangci-lint/test/testshared"
 )
 
 const minimalPkg = "minimalpkg"

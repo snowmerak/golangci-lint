@@ -4,8 +4,8 @@ import (
 	"go-simpler.org/musttag"
 	"golang.org/x/tools/go/analysis"
 
-	"github.com/golangci/golangci-lint/pkg/config"
-	"github.com/golangci/golangci-lint/pkg/goanalysis"
+	"github.com/snowmerak/golangci-lint/pkg/config"
+	"github.com/snowmerak/golangci-lint/pkg/goanalysis"
 )
 
 func New(setting *config.MustTagSettings) *goanalysis.Linter {

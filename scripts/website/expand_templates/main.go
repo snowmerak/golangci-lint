@@ -8,9 +8,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/golangci/golangci-lint/internal/renameio"
-	"github.com/golangci/golangci-lint/scripts/website/github"
-	"github.com/golangci/golangci-lint/scripts/website/types"
+	"github.com/snowmerak/golangci-lint/internal/renameio"
+	"github.com/snowmerak/golangci-lint/scripts/website/github"
+	"github.com/snowmerak/golangci-lint/scripts/website/types"
 )
 
 func main() {

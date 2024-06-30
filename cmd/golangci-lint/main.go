@@ -5,8 +5,8 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/golangci/golangci-lint/pkg/commands"
-	"github.com/golangci/golangci-lint/pkg/exitcodes"
+	"github.com/snowmerak/golangci-lint/pkg/commands"
+	"github.com/snowmerak/golangci-lint/pkg/exitcodes"
 )
 
 var (
