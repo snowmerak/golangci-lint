@@ -74,7 +74,7 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 							if valueSpec, ok := spec.(*ast.ValueSpec); ok {
 								if len(valueSpec.Names) > 0 {
 									if valueSpec.Names[0].IsExported() {
-										pass.Reportf(valueSpec.Pos(), "global variable %s should not be exported", valueSpec.Names[0].Name)
+										pass.Reportf(valueSpec.Pos(), "global variable or local temparary value %s should not be exported or pascal case", valueSpec.Names[0].Name)
 									}
 								}
 							}
@@ -111,8 +111,6 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 						trimmedName = strings.TrimPrefix(trimmedName, "Receive")
 						trimmedName = strings.TrimPrefix(trimmedName, "Publish")
 						trimmedName = strings.TrimPrefix(trimmedName, "Subscribe")
-						trimmedName = strings.TrimPrefix(trimmedName, "Set")
-						trimmedName = strings.TrimPrefix(trimmedName, "Get")
 						p := a2b[f.Name.Name+"."+trimmedName]
 						if p == nil {
 							p = &Pair{}
