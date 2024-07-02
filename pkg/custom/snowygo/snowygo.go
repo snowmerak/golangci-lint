@@ -93,6 +93,11 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 							}
 						}
 					}
+				case *ast.ImportSpec: // when import declaration is found
+					// check if import path is valid
+					if strings.Contains(node.Path.Value, "github.com/pkg/errors") {
+						pass.Reportf(node.Pos(), "should not use github.com/pkg/errors, use fmt.Errorf and errors instead")
+					}
 				case *ast.FuncDecl: // when function declaration is found
 					switch {
 					case strings.HasPrefix(node.Name.Name, "Is") && strings.HasSuffix(node.Name.Name, "Error"): // when function name has prefix, 'Check'
