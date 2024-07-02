@@ -152,16 +152,6 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 								Name:     "Subscribe",
 								Reporter: reporter,
 							}
-						case strings.HasPrefix(node.Name.Name, "Set"):
-							p.First = &PairElement{
-								Name:     "Set",
-								Reporter: reporter,
-							}
-						case strings.HasPrefix(node.Name.Name, "Get"):
-							p.Second = &PairElement{
-								Name:     "Get",
-								Reporter: reporter,
-							}
 						}
 					}
 
@@ -208,7 +198,7 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 					// when function has a body
 					if len(node.Body.List) != 0 {
 						for _, stmt := range node.Body.List {
-							// check if if statement has else branch
+							// check if statement has else branch
 							if stmt, ok := stmt.(*ast.IfStmt); ok {
 								if stmt.Else != nil {
 									pass.Reportf(stmt.Pos(), "if statement should not have an else branch, use early return or switch statement instead")
@@ -217,12 +207,21 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 						}
 					}
 				case *ast.ReturnStmt: // when return statement is found
-					// check if return statement has error and no wrapping
+					// check if return statement has error
 					if len(node.Results) > 0 {
 						for _, result := range node.Results {
+							// check result type is error or fmt.Errorf
 							if ident, ok := result.(*ast.Ident); ok && ident.Name == "err" {
-								pass.Reportf(node.Pos(), "error should not be wrapped")
+								pass.Reportf(node.Pos(), "should not return error, use fmt.Errorf instead")
 							}
+						}
+					}
+				case *ast.CallExpr: // when function call is found
+					// check if you make function is called
+					if ident, ok := node.Fun.(*ast.Ident); ok && ident.Name == "make" {
+						// check if you make function is called with 2 arguments
+						if len(node.Args) < 2 {
+							pass.Reportf(node.Pos(), "make function should be called with 2 arguments")
 						}
 					}
 				}
