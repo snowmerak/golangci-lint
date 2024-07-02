@@ -390,14 +390,12 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 			WithURL("https://github.com/Djarvur/go-err113"),
 
 		linter.NewConfig(gofmt.New(&cfg.LintersSettings.Gofmt)).
-			WithEnabledByDefault().
 			WithSince("v1.0.0").
 			WithPresets(linter.PresetFormatting).
 			WithAutoFix().
 			WithURL("https://pkg.go.dev/cmd/gofmt"),
 
 		linter.NewConfig(gofumpt.New(&cfg.LintersSettings.Gofumpt)).
-			WithEnabledByDefault().
 			WithSince("v1.28.0").
 			WithPresets(linter.PresetFormatting).
 			WithAutoFix().
