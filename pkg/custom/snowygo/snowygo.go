@@ -47,7 +47,15 @@ func splitPackagePath(path string) (string, []string) {
 	if len(parts) < 2 {
 		return "", parts
 	}
-	return parts[0], parts[1:]
+	if len(parts) == 2 {
+		return parts[0], parts[1:]
+	}
+	return parts[1], parts[2:]
+}
+
+func getGroupFromPackagePath(path string) string {
+	group, _ := splitPackagePath(path)
+	return group
 }
 
 func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interface{}, error) {
@@ -69,8 +77,9 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 						pass.Reportf(f.Pos(), "should not use util package, use specific package instead")
 					}
 				}
-				switch group {
 
+				for _, imp := range f.Imports {
+					_ = imp
 				}
 
 				switch node := node.(type) {
