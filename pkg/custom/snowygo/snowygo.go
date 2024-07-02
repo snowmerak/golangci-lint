@@ -95,8 +95,11 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 					}
 				case *ast.ImportSpec: // when import declaration is found
 					// check if import path is valid
-					if strings.Contains(node.Path.Value, "github.com/pkg/errors") {
+					switch node.Path.Value {
+					case "github.com/pkg/errors":
 						pass.Reportf(node.Pos(), "should not use github.com/pkg/errors, use fmt.Errorf and errors instead")
+					case "io/ioutil":
+						pass.Reportf(node.Pos(), "should not use io/ioutil, use os and io instead")
 					}
 				case *ast.FuncDecl: // when function declaration is found
 					switch {
@@ -186,6 +189,7 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 						hasErr := false
 						isErrLast := false
 						for i, param := range node.Type.Results.List {
+							// check if the function has an error return value
 							if ident, ok := param.Type.(*ast.Ident); ok && ident.Name == "error" {
 								hasErr = true
 								if i == len(node.Type.Results.List)-1 {
