@@ -77,6 +77,7 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 						pass.Reportf(f.Pos(), "should not use util package, use specific package instead")
 					}
 				}
+				_ = group
 
 				for _, imp := range f.Imports {
 					_ = imp
