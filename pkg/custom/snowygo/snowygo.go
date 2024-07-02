@@ -57,10 +57,21 @@ func runAnalyzer(cfg *config.SnowyGoSettings) func(pass *analysis.Pass) (interfa
 		errorCheckerMap := make(map[string]Reporter)
 
 		for _, f := range pass.Files {
+			// Get the package path
+			packagePath := pass.Pkg.Path()
+
 			ast.Inspect(f, func(node ast.Node) bool {
-				// Get the package path
-				packagePath := pass.Pkg.Path()
-				_ = packagePath
+				// check package path
+				group, parts := splitPackagePath(packagePath)
+				if len(parts) > 0 {
+					switch parts[len(parts)-1] {
+					case "util":
+						pass.Reportf(f.Pos(), "should not use util package, use specific package instead")
+					}
+				}
+				switch group {
+
+				}
 
 				switch node := node.(type) {
 				// when make goroutine is found
